@@ -7,4 +7,4 @@ project(cpp_sample)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(cpp_sample main.cpp samples/hello_world_sample.cpp samples/object_sample.cpp samples/object/Human.cpp)
+add_executable(cpp_sample main.cpp)

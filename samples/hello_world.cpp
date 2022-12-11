@@ -6,7 +6,7 @@ using namespace std;
  */
 class hello_world {
 public:
-    static void main(){
+    static void run() {
         cout << "Hello, World!" << endl;
     }
 };

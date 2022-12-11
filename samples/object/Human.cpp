@@ -1,8 +1,9 @@
 #include <string>
 
+using namespace std;
+
 /**
- * オブジェクトのサンプル2
- * 上記の改良版
+ * オブジェクトのサンプル
  */
 class Human {
     string name;
@@ -10,18 +11,13 @@ class Human {
 public :
     Human(string, int);
 
-    string getName() const;
+    string getName();
 
-    int getAge() const;
+    int getAge();
 };
 
-Human::Human(string name, int age) : name(name), age(age) {}
+Human::Human(string name, int age) : name(std::move(name)), age(age) {}
 
-string Human_2::getName() const { return name; }
+string Human::getName() { return name; }
 
-int Human_2::getAge() const { return age; }
-
-void create_object_2() {
-    Human_2 jiro("jiro", 21);
-    cout << "hello_world my name is " << jiro.getName() << ". " << jiro.getAge() << " years old." << endl;
-}
+int Human::getAge(){ return age; }
